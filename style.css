@@ -287,3 +287,75 @@ section {
     font-size: 1.4em; /* Make date smaller when expanded */
   }
 }
+
+/* Info cards container: display cards side-by-side */
+.info-cards {
+  display: flex;                /* Use flexbox for horizontal layout */
+  gap: 24px;                    /* Space between cards */
+  justify-content: center;      /* Center cards horizontally */
+  margin: 40px auto;            /* Space above/below and center */
+  max-width: 1200px;            /* Limit width for readability */
+  padding: 0 10px;              /* Padding on sides */
+}
+
+/* Individual info card styles */
+.info-card {
+  background: #f5f7fa;          /* Light background */
+  border: 1px solid #d0d7de;    /* Light border */
+  border-radius: 10px;          /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Soft shadow */
+  padding: 28px 20px;           /* Space inside card */
+  flex: 1 1 0;                  /* Cards grow equally */
+  min-width: 220px;             /* Minimum width */
+  max-width: 340px;             /* Maximum width */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;      /* Align content to left */
+  justify-content: space-between;
+  text-align: left;
+}
+
+/* Info card heading */
+.info-card h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.4em;
+}
+
+/* Info card paragraph */
+.info-card p {
+  margin-bottom: 18px;
+  font-size: 1em;
+}
+
+/* Info card link/button */
+.info-card a {
+  background: #0071c5;
+  color: white;
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: background 0.2s;
+}
+
+.info-card a:hover {
+  background: #005fa3;
+}
+
+/* Stack info cards vertically on small screens */
+@media (max-width: 900px) {
+  .info-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 98vw;
+    padding: 0;
+  }
+  .info-card {
+    width: 98vw;
+    max-width: 420px;
+    min-width: 180px;
+    align-items: flex-start;
+  }
+}

@@ -43,12 +43,15 @@ section {
   overflow-x: auto;
   /* Set a fixed height for the section so only 4 cards show */
   height: 250px;
-  /* Add some space above and below */
-  margin: 40px 0;
+  /* Set a fixed width for 4 cards plus margins */
+  width: 896px; /* 4 cards * 200px + 5 gaps * 12px (left/right of each card) */
+  max-width: 100vw; /* Prevent overflow on small screens */
+  margin: 40px auto; /* Center section horizontally and add space above/below */
   /* Add a little padding */
   padding: 20px 0;
   /* Hide the scrollbar for a cleaner look (optional for beginners) */
   scrollbar-width: thin;
+  box-sizing: border-box; /* Include padding in width */
 }
 
 /* Style each timeline card */
@@ -171,13 +174,17 @@ section > div:hover .card-inner {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   section {
     /* Stack cards vertically */
     flex-direction: column;
     align-items: center;
     height: auto; /* Let section grow with cards */
+    width: 100%; /* Use full width on small screens */
+    max-width: 100vw;
+    margin: 20px auto;
     overflow-x: visible; /* No horizontal scroll needed */
+    padding: 10px 0;
   }
   section > div {
     min-width: 90vw; /* Make cards fill most of the screen width */

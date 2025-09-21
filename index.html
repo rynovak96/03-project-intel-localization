@@ -222,18 +222,16 @@
   <section class="container mt-5">
     <div class="row">
       <div class="col-md-4 mb-4">
-        <div class="info-card">
           <h2>RISE Strategy</h2>
           <p>
             Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
             Intel sets ambitious 2030 goals, including driving industry-wide 
             progress on climate action, water stewardship, and waste reduction.
           </p>
-          <a href="#">Learn More</a>
+          <button type="button" class="btn btn-primary">Learn More</button></a>
         </div>
       </div>
       <div class="col-md-4 mb-4">
-        <div class="info-card">
           <h2>Commitment</h2>
           <p>
             In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
@@ -241,11 +239,10 @@
             environmental initiatives and partnerships across the semiconductor 
             industry.
           </p>
-          <a href="#">Learn More</a>
+           <button type="button" class="btn btn-primary">Learn More</button></a>
         </div>
       </div>
       <div class="col-md-4 mb-4">
-        <div class="info-card">
           <h2>Water &amp; Waste</h2>
           <p>
             Intel conserves billions of gallons of water annually and 
@@ -253,16 +250,34 @@
             Intel also upcycles and recycles materials to reduce waste and 
             advance a circular economy.
           </p>
-          <a href="#">Learn More</a>
+          <button type="button" class="btn btn-primary">Learn More</button></a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Subscription Form -->
-  <section>
-    <h2>Subscribe to our Newsletter</h2>
-    <!-- Add form here -->
+  <section class="text-center">
+    <h2 class="text-center">Subscribe to our Newsletter</h2>
+    <!-- Bootstrap form for email subscription -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <!-- Simple email form -->
+          <form>
+            <!-- Email input field -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <!-- Submit button -->
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </section>
 </body>
 </html>
